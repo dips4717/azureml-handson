@@ -1,0 +1,22 @@
+name: pytorch-cpu-env
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch::pytorch::*=*_cpu
+  - pytorch::torchvision
+  - pytorch::pytorch-lightning
+  - pip=24.0
+  - numpy
+  - scikit-learn
+  - scipy
+  - pandas
+  - matplotlib
+  - pip:
+    - mlflow
+    - azureml-mlflow
+    - psutil
+    - tqdm
+    - ipykernel~=6.29
