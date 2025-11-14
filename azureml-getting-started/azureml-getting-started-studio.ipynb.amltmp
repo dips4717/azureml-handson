@@ -440,17 +440,28 @@
     }
   ],
   "metadata": {
-    "description": {
-      "description": "A quickstart tutorial to train and deploy an image classification model on Azure Machine Learning studio"
+    "orig_nbformat": 4,
+    "vscode": {
+      "interpreter": {
+        "hash": "ad53975d6cd14b07e2ef76ca5c680233933f2b5b5c4b5fa1fc47a72f4636b78d"
+      }
     },
-    "kernelspec": {
-      "name": "python310-sdkv2",
-      "language": "python",
-      "display_name": "Python 3.10 - SDK v2"
+    "microsoft": {
+      "host": {
+        "AzureML": {
+          "notebookHasBeenCompleted": true
+        }
+      },
+      "ms_spell_check": {
+        "ms_spell_check_language": "en"
+      }
+    },
+    "kernel_info": {
+      "name": "python310-sdkv2"
     },
     "language_info": {
       "name": "python",
-      "version": "3.10.7",
+      "version": "3.10.18",
       "mimetype": "text/x-python",
       "codemirror_mode": {
         "name": "ipython",
@@ -460,16 +471,18 @@
       "nbconvert_exporter": "python",
       "file_extension": ".py"
     },
-    "orig_nbformat": 4,
-    "vscode": {
-      "interpreter": {
-        "hash": "ad53975d6cd14b07e2ef76ca5c680233933f2b5b5c4b5fa1fc47a72f4636b78d"
-      }
+    "kernelspec": {
+      "name": "python310-sdkv2",
+      "language": "python",
+      "display_name": "Python 3.10 - SDK v2"
     },
     "categories": [
       "SDK v2",
       "tutorials"
     ],
+    "description": {
+      "description": "A quickstart tutorial to train and deploy an image classification model on Azure Machine Learning studio"
+    },
     "nteract": {
       "version": "nteract-front-end@1.0.0"
     }
