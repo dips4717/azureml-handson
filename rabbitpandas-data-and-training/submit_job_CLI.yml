@@ -1,0 +1,53 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+
+# Local path where the training code is stored
+code: .
+
+# Command to run the training script with parameters
+command: python train_custom.py --data_dir ${{inputs.data_dir}} --epochs ${{inputs.epochs}} --learning_rate ${{inputs.learning_rate}}
+
+# Azure ML curated environment for PyTorch
+# NOTE: The 'environment' field expects an object, not a string. Use one of these methods:
+#
+# Method 1: Reference a registered Azure ML environment (preferred)
+#   - List available environments: az ml environment list --query "[].{name:name, version:version}" -o table
+#   - Then use: environment: azureml://registries/azureml/environments/<NAME>/versions/<VERSION>
+#   Example: environment: azureml://registries/azureml/environments/acpt-pytorch-2.2-cuda12.1/versions/43
+#
+# Method 2: Use Docker image directly
+#   Example: 
+#     environment:
+#       image: mcr.microsoft.com/azureml/curated/acpt-pytorch-2.2-cuda12.1:43
+#
+# Using Method 1 (registered environment):
+environment: azureml://registries/azureml/environments/acpt-pytorch-2.2-cuda12.1/versions/43
+
+# Compute cluster to run the job on
+compute: azureml:cpu-cluster
+
+# Number of instances
+resources:
+  instance_count: 1
+
+# Input data and parameters
+inputs:
+  data_dir:
+    type: uri_folder
+    mode: download
+    path: azureml://subscriptions/0ac7b36f-d0da-40e1-9e2a-3644bc3c6d6f/resourcegroups/dips-ml-rg/workspaces/dips-ml-workspace/datastores/rabbitpandas_datastore/paths/
+  epochs: 1
+  learning_rate: 0.001
+
+# Experiment name to group related jobs
+experiment_name: panda-rabbit
+
+# Display name for the job in Azure ML Studio
+display_name: using-CLI-to-submit-job
+
+# Description of the job
+description: using-CLI-to-submit-job for training a torchvision model on CPU (no quota needed)
+
+# --- IGNORE ---
+# run_id=$(az ml job create -f submit_job_CLI.yml --query name -o tsv)
+# echo "Job submitted: $run_id"
+# az ml job stream --name $run_id  # Watch the job logs in real-time
