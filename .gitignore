@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual envs / conda
+venv/
+.env/
+.venv/
+env/
+.conda/
+
+# MLflow local runs and outputs
+mlruns/
+outputs/
+
+# Azure ML and temporary files
+.azureml/
+*.azureml
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data
+data/
+*.csv
+*.tar
+*.zip
+
+# PyTorch / model artifacts
+*.pth
+
+# IDE configs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+thumbs.db
+
+# Secrets and local credentials
+.env.*
+secrets.json
+credentials.json
+
+# Notebook checkpoints and interactive artifacts
+.ipynb_checkpoints/
+
+# Local python cache and pip
+pip-wheel-metadata/
+*.egg
+
+# Ignore test output
+.junit/
+
+# npm / node (if any front-end)
+node_modules/
+
+# coverage
+.coverage
+htmlcov/
+coverage.xml
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+*.log
+
+# Terraform state (if present)
+*.tfstate
+*.tfstate.*
+
+# End of .gitignore
