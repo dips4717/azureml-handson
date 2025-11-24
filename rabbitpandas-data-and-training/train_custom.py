@@ -190,7 +190,7 @@ if __name__ == "__main__":
         except Exception:
             ml_client = MLClient(
                 subscription_id="0ac7b36f-d0da-40e1-9e2a-3644bc3c6d6f",
-                resource_group_name="dips-ml-studio",
+                resource_group_name="dips-ml-rg",
                 workspace_name="dips-ml-workspace",
                 credential=credential,
             )

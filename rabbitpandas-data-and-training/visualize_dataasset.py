@@ -19,12 +19,11 @@ try:
 except Exception:
     # Fallback if config.json is not present
     ml_client = MLClient(
-        credential,
-        subscription_id="YOUR_SUBSCRIPTION_ID",
-        resource_group_name="YOUR_RESOURCE_GROUP",
-        workspace_name="YOUR_ML_WORKSPACE_NAME",
+        subscription_id="0ac7b36f-d0da-40e1-9e2a-3644bc3c6d6f",
+        resource_group_name="dips-ml-rg",
+        workspace_name="dips-ml-workspace",
+        credential=credential,
     )
-
 print(f"Connected to workspace: {ml_client.workspace_name}")
 
 
