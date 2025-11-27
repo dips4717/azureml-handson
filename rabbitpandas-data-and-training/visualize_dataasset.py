@@ -29,7 +29,7 @@ print(f"Connected to workspace: {ml_client.workspace_name}")
 
 #%%
 # --- 2. Get the Data Asset ---
-data_asset_name = "rabbit-panda-fulldataset"
+data_asset_name = "rabbitpanda-dataasset"
 data_asset = ml_client.data.get(name=data_asset_name, label="latest")
 
 # This is the base azureml:// path

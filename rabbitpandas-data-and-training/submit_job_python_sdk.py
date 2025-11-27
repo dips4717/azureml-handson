@@ -74,7 +74,7 @@ training_job = command(
     inputs={
         "data_dir": Input(
             type="uri_folder",
-            path="azureml://subscriptions/0ac7b36f-d0da-40e1-9e2a-3644bc3c6d6f/resourcegroups/dips-ml-rg/workspaces/dips-ml-workspace/datastores/rabbitpandas_datastore/paths/",
+            path="azureml://subscriptions/0ac7b36f-d0da-40e1-9e2a-3644bc3c6d6f/resourcegroups/dips-ml-rg/workspaces/dips-ml-workspace/datastores/rabbitpanda_datastore/paths/",
             mode="download",  # use download to make access faster, mount if dataset is larger than VM
         ),
         "epochs": 1,
